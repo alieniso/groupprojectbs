@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Us</title>
+    <!--    bootstrap css1-->
+<!--    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!--    fontawesome css1-->
+    <link href="Source/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+<!--    &lt;!&ndash;    elegant css1&ndash;&gt;-->
+<!--    <link href="libs/css/elegant-icons.css" rel="stylesheet" type="text/css">-->
+<!--    &lt;!&ndash;    owl css1&ndash;&gt;-->
+<!--    <link href="../css/owl.carousel.min.css" rel="stylesheet" type="text/css">-->
+<!--    &lt;!&ndash;    slick css1&ndash;&gt;-->
+<!--    <link href="../css/slick.css" rel="stylesheet" type="text/css">-->
+<!--    &lt;!&ndash;    slicknav css1&ndash;&gt;-->
+<!--    <link href="../css/slicknav.min.css" rel="stylesheet" type="text/css">-->
+    <!--    google api-->
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<style>
+    /*Start Nav Bar And About Us(cho)*/
+    .cnav{
+        background-image: url(libs/img/hero/hero-1.jpg);
+        /*height: 350px;*/
+    }
+
+    .cdiv1 li{
+        position: relative;
+    }
+    .cdiv1 li a::before{
+        content: '';
+        width: 100%;
+        height: 120%;
+
+        border-bottom: 2px solid tomato;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+
+        transform: scaleX(0);
+        transition: all 0.2s;
+
+    }
+    .cdiv1 li:hover a::before{
+        transform: scaleX(1);
+    }
+
+    @media(max-width: 600px){
+        /*.cdiv2{
+          margin-left: 25px;
+
+          }*/
+
+
+        .cdiv1 li{
+            position: relative;
+
+        }
+        .cdiv1 li a::before{
+            content: '';
+            width: 0%;
+            height: 0%;
+
+            /*position: absolute;
+            top: 0;
+            left: 0;*/
+        }
+
+    }
+    .cdiv-3{
+        padding-top: 100px;
+    }
+    .cdiv-3 h2{
+        font-family: 'Aldrich', sans-serif;
+    }
+    .cdiv-3 p{
+        font-family: "Poppins",sans-serif;
+    }
+
+    /*End Nav Bar And About Us(cho)*/
+    /*Start Team Animation Section(cho and nay yi)*/
+    *{
+        box-sizing: border-box;
+    }
+    .team{
+        padding: 100px 100px;
+
+    }
+    .team-head p{
+        color: #dfa667;
+        font-weight: bold;
+        font-size: 18px;
+        font-family: "Poppins", sans-serif;
+    }
+    .team-head h1{
+        font-family: "Aldrich", sans-serif;
+    }
+
+
+
+    .btn-team{
+        font-size: 16px;
+        font-weight: bold;
+        padding: 16px 50px;
+        margin-left: 375px;
+
+        position: relative;
+    }
+    .btn-team::before{
+        content: '';
+        width: 24px;
+        height: 24px;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        border-top: 1px solid #111111;;
+        border-right: 1px solid #111111;;
+
+        transition: all 0.5s;
+    }
+
+    .btn-team::after{
+        content: '';
+        width: 24px;
+        height: 24px;
+
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        border-left: 1px solid #111111;;
+        border-bottom: 1px solid #111111;;
+
+        transition: all 0.5s;
+    }
+    .btn-team:hover::before,
+    .btn-team:hover::after{
+        width: 100%;
+        height: 100%;
+    }
+    .team-container{
+        position: relative;
+        overflow: hidden;
+    }
+    .caption{
+        font-family: "Poppins", sans-serif;
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+        left: 10;
+
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        padding: 40px 40px;
+
+
+    }
+    .team-container:before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color:#242424;
+        opacity: 0;
+
+        position: absolute;
+        top: 0;
+        left: 10;
+        transition: all 0.5s;
+
+    }
+
+    .team-container:hover::before{
+        opacity: 0.8;
+    }
+    .caption .title{
+        height: 80px;
+        margin-top: -50px;
+        transform: translateY(360px);
+        transition: all 0.6s;
+    }
+    .title h5{
+        color: white;
+    }
+    .title span{
+        color: #dfa667;
+    }
+    .team-container:hover .title{
+        border-bottom: 1px solid grey;
+        transform: translateY(0px);
+    }
+    .caption p{
+        margin-top: -50px;
+        color: #b7b7b7;
+        transform: translateY(-500px);
+        transition: all 0.5s;
+        font-weight: lighter;
+        font-family: "Poppins", sans-serif;
+
+    }
+    .team-container:hover p{
+        transform: translateY(0);
+    }
+    .team-icon{
+        transform: translateY(150px);
+        transition: all 0.5s;
+        margin-left: -10px;
+    }
+    .team-container:hover .team-icon{
+        transform: translateY(0);
+
+    }
+
+
+    /*End Team Animation Section(cho and nay yi)*/
+    /*Start Why Choose Us Section (nay yi)*/
+    .whychooseus{
+        background-image: url("libs/img/call-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+
+    }
+    .whychooseus h1{
+        font-family: "Aldrich", sans-serif;
+        margin-bottom: 36px;
+    }
+
+    .whychooseus p{
+        font-size: 16px;
+        font-family: "Poppins", sans-serif;
+        color: #dfa667;
+        letter-spacing: 1px;
+        margin-bottom: 35px;
+    }
+
+    .whychooseus a{
+        font-size: 16px;
+        font-family: "Poppins", sans-serif;
+        background-color: #dfa667;
+        color: #fff;
+        font-weight: bolder;
+        padding: 16px 50px;
+
+    }
+
+    .whychooseus a:hover{
+        color: white;
+    }
+
+    /*End Why Choose Us Section*/
+
+    /*Start Footer (nay yi)*/
+    footer{
+        background-image: url("libs/img/footer-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+    }
+    .foot-container{
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .foot-row{
+        padding-top: 75px;
+        padding-bottom: 75px;
+        border-bottom: 1px solid rgba(183, 183, 183, 0.2);
+        margin-bottom: 85px;
+    }
+    .foot-row h1{
+        font-family: "Aldrich", sans-serif;
+        text-transform: uppercase;
+        color: white;
+        margin-left: -10px;
+    }
+
+
+    .foot-row span{
+        font-size: 14px;
+        background-color: #dfa667;
+        border: none;
+        padding: 0 20px;
+
+
+    }
+
+    #send{
+        font-size: 14px;
+        width: 350px;
+        height: 50px;
+        color: #b7b7b7;
+        border: none;
+
+    }
+    #send:focus{
+        outline: 0;
+    }
+
+    .div-staging {
+        font-family: "Poppins", sans-serif;
+        margin-bottom: 30px;
+        margin-left: -10px;
+    }
+
+    .div-staging p {
+        line-height: 26px;
+        margin-bottom: 35px;
+    }
+
+    .div-staging a {
+        text-decoration: none;
+        margin-bottom: 40px;
+
+    }
+
+    .a-staging h1 {
+        margin-bottom: 25px;
+    }
+
+    .a-staging h1 button {
+        padding: 3px;
+        border: none;
+        background-color: #dfa667;
+        margin-left: 3px;
+    }
+    .div-icon a{
+        margin-right: 25px;
+    }
+
+
+    .div-company {
+        margin-bottom: 30px;
+
+    }
+
+    .ul-company, .ul-services {
+        font-family: "Poppins", sans-serif;
+        list-style-type: none;
+        margin-left: -40px;
+        margin-top: 30px;
+    }
+
+    .ul-company li, .ul-services li {
+        line-height: 40px;
+    }
+
+    .ul-company li a, .ul-services li a {
+        text-decoration: none;
+    }
+
+    .div-getintouch p {
+        font-family: "Poppins", sans-serif;
+        line-height: 26px;
+        margin-top: 35px;
+    }
+
+    .foot-caption {
+        font-family: "Poppins", sans-serif;
+        border-bottom: 1px solid rgba(183, 183, 183, 0.2);
+    }
+    .foot-bottom{
+        font-family: "Poppins", sans-serif;
+        padding-top: 30px;
+        padding-bottom: 15px;
+    }
+    .copy{
+        margin-left: -15px;
+    }
+
+
+    /*End Footer*/
+</style>
+<body>
+<!-- Start Navbar -->
+<div class="cnav">
+    <div class="container">
+        <div class="row">
+            <nav class="navbar navbar-expand-md mb-5">
+                <a href="" class="col-lg-3"><img src="libs/img/logo.png" alt="nav"/></a>
+                <button class="navbar-toggler mx-3" data-bs-toggle="collapse" data-bs-target="#chonav"><i class="fas fa-align-justify text-light"></i></button>
+
+                <div class="navbar-collapse collapse justify-content-between col-lg-9 mt-3 " id="chonav">
+                    <ul class="cdiv1 navbar-nav justify-content-center mx-3">
+                        <li class="nav-item mx-2"><a href="index.html" class="nav-link fw-bold text-light">Home</a></li>
+                        <li class="nav-item mx-2"><a href="projects.html" class="nav-link fw-bold text-light">Project</a></li>
+                        <li class="nav-item mx-2"><a href="aboutus.html" class="nav-link fw-bold text-light">About</a></li>
+                        <li class="nav-item dropdown mx-2 "><a href="" class="nav-link fw-bold text-light dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="" class="dropdown-item">Project Details</a></li>
+                                <li><a href="" class="dropdown-item">About</a></li>
+                                <li><a href="" class="dropdown-item">Services</a></li>
+                                <li><a href="" class="dropdown-item">Blog Details</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item mx-2"><a href="blog.html" class="nav-link fw-bold text-light">Blog</a></li>
+                        <li class="nav-item mx-2"><a href="contact.html" class="nav-link fw-bold text-light">Contact</a></li>
+
+                    </ul>
+                    <div class="cdiv2 text-right">
+                        <p class="text-light">Call us for any questions</p>
+                        <p class="text-warning">+01 123 456 789</p>
+                    </div>
+                </div>
+
+
+
+            </nav>
+            <div class="text-center mb-5 py-3">
+                <h1 class="text-light text-uppercase">about us</h1>
+                <p class="text-light">Home &thicksim;<span class="text-warning">About us</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Navbar -->
+<!-- Start About Us -->
+<section>
+
+    <div class="container py-5" >
+        <div class="row cdiv-3">
+            <!-- <div style="padding-top: 100px" class="d-flex justify-content-center"> -->
+            <div class="col-lg-4 col-sm-12">
+                <span class="text-warning fw-bold">WHO ARE WE</span>
+                <h2 class=" fs-1">ABOUT US</h2>
+                <p class="mt-4">As you might expect of a company that began as a high-end interiors contractor.</p>
+            </div>
+            <div class="col-lg-8 col-sm-12 ">
+                <p>Metasurfaces are generally designed by placing scatterers in periodic or pseudo-periodic grids. We propose and discuss design rules for functional metasurfaces with randomly placed. Anisotropic elements that randomly sample. Quisque sit amet nisl ante.
+                </p>
+                <div class="row">
+                    <div class="col-lg-6 col-sm-12">
+                        <img src="libs/img/services/services-5.png" class="mb-4 mt-4">
+                        <h2>OUR MISSION</h2>
+                        <p class="mt-4">As you might expect of a company that began as a high-end interiors contractor, we pay strict attention. Anisotropic elements that randomly sample.</p>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <img src="libs/img/services/services-6.png" class="mb-4 mt-4">
+                        <h2> OUR VISION</h2>
+                        <p class="mt-4"> Our commitment to exceptional quality has never wavered. To day ranks as one of the most highly-regarded construction. Anisotropic elements that randomly sample.</p>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- </div> -->
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- End About Us -->
+<!--Start Why Choose Us Section (nay yi)-->
+<section class="whychooseus">
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-center" style="height: 100vh;">
+            <div class="col-md-10 text-center">
+                <p class="text-uppercase font-weight-bold">Why choose us?</p>
+                <h1 class="text-uppercase text-light">Our ability to bring outstanding<br/> results to our customers.</h1>
+                <a href="#" class="btn btn-lg">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--End Why Choose Us Section-->
+<!--Start Team Animation Section-->
+<section class="team">
+    <div class="container">
+        <div class="row">
+            <div class="team-head col-md-6">
+                <p>Our Team</p>
+                <h1>MEET OUR TEAM</h1>
+            </div>
+            <div class="col-md-6">
+                <a href="#" class="btn btn-team text-dark">View All</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="team-container col-md-4">
+                <img src="libs/img/team/team-1.jpg" class="img-fluid col-12"/>
+                <div class="caption">
+                    <div class="title">
+                        <h5>Dolores Webster</h5>
+                        <span>CEO & Founder</span>
+                    </div>
+                    <p>Vestibulum dapibus odio quam, sit amet hendrerit dui ultricies consectetur. Ut viverra porta leo, non tincidunt mauris condimentum eget. Vivamus non turpis elit. Aenean ultricies nisl sit amet.</p>
+                    <div class="team-icon">
+                        <a href="#"><i class="fab fa-facebook fa-lg text-light px-3"></i></a>
+                        <a href="#"><i class="fab fa-twitter fa-lg text-light px-3"></i></a>
+                        <a href="#"><i class="fab fa-instagram fa-lg text-light px-3"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-container col-md-4">
+                <img src="libs/img/team/team-2.jpg" class="img-fluid col-12"/>
+                <div class="caption">
+                    <div class="title">
+                        <h5>Dana Vaughn</h5>
+                        <span>Architect</span>
+                    </div>
+                    <p>Vestibulum dapibus odio quam, sit amet hendrerit dui ultricies consectetur. Ut viverra porta leo, non tincidunt mauris condimentum eget. Vivamus non turpis elit. Aenean ultricies nisl sit amet.</p>
+                    <div class="team-icon">
+                        <a href="#"><i class="fab fa-facebook fa-lg text-light px-3"></i></a>
+                        <a href="#"><i class="fab fa-twitter fa-lg text-light px-3"></i></a>
+                        <a href="#"><i class="fab fa-instagram fa-lg text-light px-3"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-container col-md-4">
+                <img src="libs/img/team/team-3.jpg" class="img-fluid col-12"/>
+                <div class="caption">
+                    <div class="title">
+                        <h5>Jonathan Mcdaniel</h5>
+                        <span>Architect</span>
+                    </div>
+                    <p>Vestibulum dapibus odio quam, sit amet hendrerit dui ultricies consectetur. Ut viverra porta leo, non tincidunt mauris condimentum eget. Vivamus non turpis elit. Aenean ultricies nisl sit amet.</p>
+                    <div class="team-icon">
+                        <a href="#"><i class="fab fa-facebook fa-lg text-light px-3"></i></a>
+                        <a href="#"><i class="fab fa-twitter fa-lg text-light px-3"></i></a>
+                        <a href="#"><i class="fab fa-instagram fa-lg text-light px-3"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+</section>
+
+<!--End Team Animation Section-->
+
+
+<!--Start Footer (nay yi)-->
+<footer>
+    <div class="container-fluid">
+        <div class="foot-container">
+            <div class="foot-row row">
+
+                <div class="col-md-7">
+                    <h1>ready to work with us?</h1>
+                </div>
+                <div class="col-md-5">
+                    <form class="" action="" method="">
+                        <div class="input-group justify-content-end">
+                            <input type="text" name="send" id="send" class="rounded-0 text-muted"
+                                   placeholder="Enter your email..."/>
+                            <span class="input-group-text rounded-0"><i class="fa fa-send text-light"></i></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="foot-caption row">
+                <div class="div-staging col-md-4">
+
+                    <a href="#" class="a-staging text-light ">
+                        <h1>Staging
+                            <button></button>
+                        </h1>
+                    </a>
+                    <p class="text-muted">7176 Blue Spring Lane<br/>
+                        Santa Monica, CA 90403</p>
+                    <p class="text-muted">Info.colorlib@gmail.com<br/>
+                        +84 123 456 789</p>
+
+                    <div class="div-icon float-start">
+                        <a href="#"><i class="fa fa-facebook fa-lg text-light"></i></a>
+                        <a href="#"><i class="fa fa-twitter fa-lg text-light"></i></a>
+                        <a href="#"><i class="fa fa-instagram fa-lg text-light"></i></a>
+                        <a href="#"><i class="fa fa-linkedin fa-lg text-light"></i> </a>
+                    </div>
+
+
+                </div>
+                <div class="div-company col-md-2 text-left">
+
+                    <h6 class="h6-company text-light">Company</h6>
+                    <ul class="ul-company">
+                        <li><a href="#" class="text-muted">About Us</a></li>
+                        <li><a href="#" class="text-muted">Sevices</a></li>
+                        <li><a href="#" class="text-muted">Our Works</a></li>
+                        <li><a href="#" class="text-muted">Career</a></li>
+                        <li><a href="#" class="text-muted">FAQs</a></li>
+                    </ul>
+
+                </div>
+                <div class="col-md-2 text-left">
+
+                    <h6 class="h6-services text-light">Services</h6>
+                    <ul class="ul-services">
+                        <li><a href="#" class="text-muted">Architecture</a></li>
+                        <li><a href="#" class="text-muted">Interior Design</a></li>
+                        <li><a href="#" class="text-muted">Exterior Design</a></li>
+                        <li><a href="#" class="text-muted">Planning</a></li>
+                    </ul>
+
+                </div>
+                <div class="div-getintouch col-md-4 text-left">
+                    <h6 class="text-light">Get In Touch</h6>
+                    <p class="text-muted">7176 Blue Spring Lane<br/>
+                        Santa Monica, CA 90403</p>
+                    <p class="text-muted">Info.colorlib@gmail.com<br/>
+                        +84 123 456 789</p>
+                </div>
+
+            </div>
+            <div class="foot-bottom row">
+                <div class="copy col-md-8 text-left">
+                    <p class="text-muted">Copyright © 2021 All rights reserved | This template is made with <i
+                            class="fa fa-heart-o" style="color: #dfa667;"></i> by <a href="#" class="text-light"
+                                                                                     style="text-decoration: none;">Colorlib</a>
+                    </p>
+                </div>
+                <div class="policy col-md-4 text-lg-right text-sm-center">
+                    <a href="#" class="text-muted text-decoration-none">Terms of use  </a> <span class="px-2">  | </span> <a href="#"  class="text-muted" style="text-decoration: none;">Privacy Policy</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</footer>
+<!--End Footer-->
+<!--bs cdn-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
